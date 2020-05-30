@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="attention">
-            <logout></logout>
+        
         </div>
         <div class="sidebyside">
             <table class="formal">
@@ -77,8 +77,7 @@
             Schedule,
             Timeline,
             Cell,
-            TimeFilter,
-            logout
+            TimeFilter
         },
         data() {
             return {
