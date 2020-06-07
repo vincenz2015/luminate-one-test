@@ -26,6 +26,7 @@ Route::group(['middleware' => 'api'], function($router) {
     Route::get('availability', 'AvailabilityController@index');
     Route::patch('availability/projects', 'AvailabilityController@updateProjects');
     Route::patch('availability', 'AvailabilityController@updateAvailability');
+    Route::post('autoschedule', 'AvailabilityController@autoscheduleResources');
 
     Route::get('projects', 'ProjectsController@index');
     Route::post('projects', 'ProjectsController@create');
