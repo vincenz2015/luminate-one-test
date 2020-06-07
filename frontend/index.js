@@ -6,6 +6,7 @@ Vue.config.productionTip = false
 import './projects'
 import './resouces'
 import './scheduler'
+import './autoschedule'
 
 // make sure this is last (otherwise the wildcards will catch other defined routes)
 import './routes'

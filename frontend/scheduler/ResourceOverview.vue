@@ -14,6 +14,9 @@
                     <td colspan="3">
                         <router-link :to="projectsHref" class="btn_nav">View projects</router-link>
                         <router-link :to="availabilityHref" class="btn_nav">Update availability</router-link>
+                        <div align="left" style="margin-top:5px">
+                            <router-link :to="autoScheduleHref" class="btn_nav">Auto schedule resources</router-link>
+                      </div>
                     </td>
                 </tr>
                 </thead>
@@ -161,6 +164,9 @@
             },
             availabilityHref() {
                 return '/availability'
+            },
+            autoScheduleHref() {
+                return '/autoschedule/create'
             }
         },
         methods: {

@@ -34,6 +34,15 @@ const store = {
 
 inject('store', store)
 inject('pod', ({hub, store}) => {
+    hub.on('autoschedule resources', resource =>
+    window.axios.post('/api/autoschedule', resource)
+        .then((res) => {
+            store.commit('autoschedule/create', res.data)
+            return hub.emit('autoscheduled resources', res.data)
+        })
+        .catch(err => {
+            return err.response
+        }))
     hub.on('create resource', resource =>
         window.axios.post('/api/resources', resource)
             .then((res) => {
