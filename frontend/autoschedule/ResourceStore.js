@@ -5,14 +5,16 @@ const store = {
     namespaced: true,
     state: {
         resources: [
-            // { id: 1, name: 'Jate', icon: '🚀' },
         ],
         resourcesById: {}
+        ,
+        totals: {}
     },
     mutations: {
         create: (state, r) => {
             state.resources.push(r)
             state.resourcesById[r.id] = r
+            state.totals = r.totals
         }
     }
 }

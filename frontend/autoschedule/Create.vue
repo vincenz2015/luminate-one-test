@@ -130,9 +130,9 @@ export default {
         },
         create(e) {
             e.preventDefault();
-            const oncreated = p => {
+            const oncreated = response => {
                 this.$hub.off(oncreated);
-                //this.$router.push(`/autoschedule/created`);
+                this.$router.push(`/autoschedule/created`);
             };
             this.$hub.on("autoscheduled resources", oncreated);
             this.$hub

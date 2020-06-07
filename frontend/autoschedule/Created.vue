@@ -7,6 +7,7 @@
             <div class="input-group">
                 <div class="w-80 d-inline-block">
                     <p>Your resources were auto-schedule</p>
+                    <p><b>{{ scheduled.totalItemsCreated }}</b> assignments were auto created</p>
                 </div>
             </div>
             <br>
@@ -30,6 +31,7 @@ export default {
     },
     data() {
         return {
+            scheduled: this.$store.state.autoschedule.totals,
             errors: []
         };
     },
