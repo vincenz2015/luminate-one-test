@@ -127,17 +127,12 @@ export default {
     methods: {
         updateProjects(data) {
             this.selectedProjects = data;
-            console.log(this.selectedProjects);
         },
         create(e) {
             e.preventDefault();
-
-            console.log(this.selectedResources);
-            console.log(this.selectedProjects);
-
             const oncreated = p => {
                 this.$hub.off(oncreated);
-                alert("done");
+                //this.$router.push(`/autoschedule/created`);
             };
             this.$hub.on("autoscheduled resources", oncreated);
             this.$hub

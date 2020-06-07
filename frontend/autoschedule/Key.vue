@@ -46,9 +46,7 @@ export default {
     methods: {
         updateProjects() {
             let sel = this.selectedProjects;
-            console.log("child sel" + sel);
             this.$emit('updateSelectedProjects', sel);
-            console.log("clicked");
         }
     }
 }
